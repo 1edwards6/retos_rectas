@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#172554">
+  <title>Desafíos de rectas</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <div class="brand-mark">f(x)</div>
+      <div>
+        <p class="eyebrow">LABORATORIO MATEMÁTICO</p>
+        <h1>Desafíos de rectas</h1>
+      </div>
+    </header>
+
+    <section id="home-screen" class="screen">
+      <div class="intro">
+        <span class="tag">Entrena contra el reloj</span>
+        <h2>¿Qué tan rápido dominas las rectas?</h2>
+        <p>Completa los tres retos para practicar la notación de puntos, el cálculo de la pendiente y la representación gráfica.</p>
+      </div>
+
+      <div class="challenge-grid">
+        <button class="challenge-card" data-start="notation">
+          <span class="card-number">01</span>
+          <span class="card-icon">(x, y)</span>
+          <span class="card-title">Notación</span>
+          <span class="card-description">Identifica las cuatro coordenadas de dos puntos.</span>
+          <span class="card-best" id="best-notation">Mejor tiempo: --:--</span>
+          <span class="card-action">Comenzar reto <span>→</span></span>
+        </button>
+        <button class="challenge-card" data-start="formula">
+          <span class="card-number">02</span>
+          <span class="card-icon">m = Δy / Δx</span>
+          <span class="card-title">Fórmula de la pendiente</span>
+          <span class="card-description">Completa la fórmula con las coordenadas y encuentra la pendiente.</span>
+          <span class="card-best" id="best-formula">Mejor tiempo: --:--</span>
+          <span class="card-action">Comenzar reto <span>→</span></span>
+        </button>
+        <button class="challenge-card" data-start="graph">
+          <span class="card-number">03</span>
+          <span class="card-icon">↗</span>
+          <span class="card-title">Graficar</span>
+          <span class="card-description">Ubica dos puntos en el plano y traza la recta que los une.</span>
+          <span class="card-best" id="best-graph">Mejor tiempo: --:--</span>
+          <span class="card-action">Comenzar reto <span>→</span></span>
+        </button>
+      </div>
+      <p class="home-note"><span>⏱</span> El tiempo empieza al iniciar cada reto. Los mejores tiempos se guardan en este dispositivo.</p>
+    </section>
+
+    <section id="game-screen" class="screen hidden">
+      <div class="game-topline">
+        <button id="back-home" class="back-button">← Menú</button>
+        <div class="timer-panel">
+          <span class="timer-label">TIEMPO</span>
+          <strong id="timer">00:00.00</strong>
+        </div>
+        <div class="mistake-panel"><span>Errores</span><strong id="mistakes">0</strong></div>
+      </div>
+
+      <div class="game-heading">
+        <span id="game-kicker" class="tag">RETO 01</span>
+        <h2 id="game-title">Notación</h2>
+        <p id="game-instructions"></p>
+      </div>
+
+      <div id="game-content" class="game-content"></div>
+      <div id="feedback" class="feedback" aria-live="polite"></div>
+      <div id="completion" class="completion hidden">
+        <div class="completion-icon">✓</div>
+        <h3>¡Reto completado!</h3>
+        <p id="completion-time"></p>
+        <p id="completion-best" class="best-message"></p>
+        <button id="play-again" class="primary-button">Jugar otra vez</button>
+        <button id="return-menu" class="secondary-button">Volver al menú</button>
+      </div>
+    </section>
+
+    <footer>Desafíos de rectas · Matemáticas</footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
